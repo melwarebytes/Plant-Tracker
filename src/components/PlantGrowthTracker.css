@@ -1,0 +1,96 @@
+.plant-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.plant-card-wrapper {
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.plant-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.plant-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.plant-card-front,
+.plant-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plant-card-front {
+  background-color: #1f1f1f;
+  text-align: center;
+  z-index: 2;
+  transform: rotateY(0);
+}
+
+.plant-card-back {
+  background-color: #1f1f1f;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.plant-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.plant-timer {
+  font-family: monospace;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.full-screen-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #121212;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.plant-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
